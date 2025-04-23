@@ -372,17 +372,32 @@
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
+  .h-\[9vh\] {
+    height: 9vh;
+  }
   .h-\[50vh\] {
     height: 50vh;
   }
   .h-\[75vh\] {
     height: 75vh;
   }
+  .h-\[90vh\] {
+    height: 90vh;
+  }
+  .h-\[91vh\] {
+    height: 91vh;
+  }
   .h-\[92vh\] {
     height: 92vh;
   }
+  .h-\[93vh\] {
+    height: 93vh;
+  }
   .h-\[100vh\] {
     height: 100vh;
+  }
+  .h-\[vh\] {
+    height: vh;
   }
   .h-full {
     height: 100%;
