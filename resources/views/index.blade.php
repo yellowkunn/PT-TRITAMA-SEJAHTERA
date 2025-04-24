@@ -1,166 +1,108 @@
-@extends('layouts.main')
-@section('container')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/output.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Products</title>
+</head>
+  
+<body>
 
-<!-- Header atau gambar-->
+  <div class="min-h-screen bg-cover bg-center p-6 sm:p-10" style="background-image: url('{{ asset('images/bg_konten1.jpg') }}')">
+  
+  {{-- <div class="absolute inset-0 z-10 flex items-center justify-center text-white text-3xl font-bold">Welcome to Our Products</div> 
+   <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-4">
+    <h2 class="text-2xl mb-4">Explore Our Exclusive Range</h2>
+    <p class="mb-8">Discover the best products tailored just for you.</p>
+   </div> --}}
 
-<div id="petshopCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <!-- Slide 1 -->
-    <div class="carousel-item active"
-      style="height: 75vh; background-image: url({{ asset('images/pet1.jpg') }}); background-size: cover; background-position: center;">
-      <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
-        <h4>Perawatan untuk Peliharaan yang Anda Cintai</h4>
-    </div>
-    
-    </div>
-    <!-- Slide 2 -->
-    <div class="carousel-item"
-      style="height: 75vh; background-image: url({{ asset('images/pet2.jpg') }}); background-size: cover; background-position: center;">
-      <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
-        <h4>Layanan Terjangkau dan Terpercaya</h4>
-      </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="carousel-item"
-      style="height: 75vh; background-image: url({{ asset('images/pet3.jpg') }}); background-size: cover; background-position: center;">
-      <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
-        <h4>Kebahagiaan Hewan Peliharaan Anda, Prioritas Kami</h4>
-      </div>
-    </div>
-  </div>
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#petshopCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#petshopCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+   
 
-<div class="container-fluid box">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col mx-auto" style="max-width: 190px;">
-      <a href="/makanan" style="text-decoration: none;">
-        <div class="card cards h-100">
-          <img src="/images/51205.jpg" class="card-img-top " alt="...">
-          <div class="card-body">
-            <h6 class="card-title">Makanan</h6>
-          </div>
-        </div>
+{{-- <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+      <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+  </a>
+
+<div class="p-5">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
       </a>
-    </div>
-    <div class="col mx-auto" style="max-width: 190px;">
-      <a href="/alat" style="text-decoration: none;">
-        <div class="card cards h-100 card2">
-          <img src="/images/peralatan.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h6 class="card-title">Peralatan Hewan</h6>
-          </div>
-        </div>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+           <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
       </a>
-    </div>
-    <div class="col mx-auto" style="max-width: 190px;">
-      <a href="/adopsi" style="text-decoration: none;">
-        <div class="card cards h-100 card2">
-          <img src="/images/adopsi_hewan.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h6 class="card-title">Adopsi</h6>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col mx-auto" style="max-width: 190px;">
-      @if (Route::has('login'))
-      @auth
-      <a href="/formpenitipan" style="text-decoration: none;">
-        <div class="card cards h-100 card2">
-          <img src="/images/penitipan_kucing.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h6 class="card-title">Penitipan Hewan</h6>
-          </div>
-        </div>
-      </a>
-      @else
-      <a href="{{ route('login') }}" style="text-decoration: none;">
-        <div class="card cards h-100 card2">
-          <img src="/images/penitipan_kucing.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h6 class="card-title">Penitipan Hewan</h6>
-          </div>
-        </div>
-      </a>
-      @endauth
-      @endif
-    </div>
   </div>
 </div>
 
 
-{{-- <!-- Bagian untuk Hewan -->
-<div class="container-fluid box2">
-  <h2 style="padding-top: 60px">Hewan</h2>
-  <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 50px;">
-    @foreach($dataHewan as $item)
-    <div class="col">
-      <a href="/detail-hewan/{{ $item->ID_Barang }}" style="text-decoration: none;">
-        <div class="card cards h-100">
-          <img src="{{ asset('berkas_ujis/' . $item->gambar) }}" class="card-img-top img-bordered" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ $item->Nama_Hewan }}</h5>
-            <p class="card-text">{{ $item->deskripsi }}</p>
-          </div>
-        </div>
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+  <a href="#">
+      <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+  </a>
+  <div class="p-5">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
       </a>
-    </div>
-    @endforeach
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+      <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+           <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+      </a>
+  </div>
+</div> --}}
+
+
+
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
   </div>
 </div>
 
 
-<!-- Bagian untuk Makanan -->
-<div class="container-fluid box2">
-  <h2>Makanan</h2>
-  <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 50px;">
-    @foreach($dataMakanan as $item)
-    <div class="col">
-      <a href="/detail-barang/{{ $item->ID_Barang }}" style="text-decoration: none;">
-        <div class="card cards h-100">
-          <img src="{{ asset('berkas_ujis/' . $item->gambar) }}" class="card-img-top img-bordered" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ $item->Nama_Barang }}</h5>
-            <p class="card-text">{{ $item->deskripsi }}</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    @endforeach
-  </div>
-</div>
 
-<div class="container-fluid box2">
-  <h2>Alat</h2>
-  <div class="row row-cols-1 row-cols-md-4 g-4" style="padding: 50px;">
-    @foreach($dataAlat as $item)
-    <div class="col">
-      <a href="/detail-barang/{{ $item->ID_Barang}}" style="text-decoration: none;">
-        <div class="card cards h-100">
-          <img src="{{ asset('berkas_ujis/' . $item->gambar) }}" class="card-img-top img-bordered" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{ $item->Nama_Barang }}</h5>
-            <p class="card-text">{{ $item->deskripsi }}</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    @endforeach
-  </div>
-</div><br> --}}
-
-
-
-
-<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('vendor/css/js/bootstrap.min.js') }}"></script>
-@endsection
+</body>
+</html>
