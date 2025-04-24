@@ -23,10 +23,10 @@
     
      <div class="max-w-7xl mx-auto">
       <div class="flex items-center mb-8">
-       <button aria-label="Go back" class="flex items-center justify-center w-10 h-10 rounded-lg bg-sky-200 text-sky-900 mr-6">
+       <a href="" class="flex items-center justify-center w-10 h-10 rounded-lg bg-sky-200 text-sky-900 mr-6">
         <i class="fas fa-arrow-left text-lg">
         </i>
-       </button>
+       </a>
        <h1 class="text-white font-extrabold text-2xl sm:text-3xl" style="font-family: 'Inter', sans-serif;">
         Stainless Steel Products
        </h1>
@@ -75,7 +75,7 @@
         <img alt="Black stainless steel bottle with a soft blue glow behind it" class="mx-auto mb-6" height="250" src="https://storage.googleapis.com/a1aa/image/c0117595-6738-43a9-40a1-0df8aa7bfb0e.jpg" width="150"/>
         <div class="flex justify-between items-center">
          <h2 class="text-sky-900 font-bold text-lg">
-          Product 3
+          Product 4
          </h2>
          <a href="product3b.html" class="bg-sky-900 text-white text-xs rounded-md hover:text-black px-3 py-1 flex items-center gap-1 hover:bg-amber-50">
           Read more
@@ -88,7 +88,7 @@
         <img alt="Black stainless steel bottle with a soft blue glow behind it" class="mx-auto mb-6" height="250" src="https://storage.googleapis.com/a1aa/image/c0117595-6738-43a9-40a1-0df8aa7bfb0e.jpg" width="150"/>
         <div class="flex justify-between items-center">
          <h2 class="text-sky-900 font-bold text-lg">
-          Product 4
+          Product 5
          </h2>
          <a href="product4.html" class="bg-sky-900 text-white text-xs rounded-md hover:text-black px-3 py-1 flex items-center gap-1 hover:bg-amber-50">
           Read more
@@ -101,7 +101,7 @@
         <img alt="Black stainless steel bottle with a soft blue glow behind it" class="mx-auto mb-6" height="250" src="https://storage.googleapis.com/a1aa/image/c0117595-6738-43a9-40a1-0df8aa7bfb0e.jpg" width="150"/>
         <div class="flex justify-between items-center">
          <h2 class="text-sky-900 font-bold text-lg">
-          Product 5
+          Product 6
          </h2>
          <a href="product5.html" class="bg-sky-900 text-white text-xs rounded-md hover:text-black px-3 py-1 flex items-center gap-1 hover:bg-amber-50">
           Read more

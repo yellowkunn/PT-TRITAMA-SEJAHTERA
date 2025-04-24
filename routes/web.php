@@ -24,4 +24,8 @@ Route::get('/index', function () {
 Route::get('/tailwind', function () {
     return view('tailwind');
 });
+Route::get('/kategori', function () {
+    return view('kategori_prod');
+});
+
 
