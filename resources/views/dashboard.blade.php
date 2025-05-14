@@ -13,14 +13,15 @@
 <body class="font-bold">
 
 
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav class=" border-gray-200 bg-black">
         <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                <img src="{{ URL('images/TRISEINDO_ICON.png') }}" class="h-10" alt="Logo" />
+                {{-- <img src="{{ URL('images/TRISEINDO_ICON.png') }}" class="h-10" alt="Logo" /> --}}
+                <span class="self-center text-sm font-semibold whitespace-nowrap dark:text-white">Tritama Sejahtera <br>Indonesia</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -61,8 +62,8 @@
     </nav>
 
     {{-- konten 1 --}}
-    <div class="w-full h-[94vh] relative overflow-hidden">
-        <img src="{{ URL('images/bg_konten1.jpg') }}"
+    {{-- <div class="w-full h-[94vh] relative overflow-hidden">
+        <img src="{{ URL('images/bg_konten4.jpg') }}"
             class="w-full h-full object-cover absolute top-0 left-0 z-0 brightness-75" alt="Background">
 
         <div class="relative z-10 w-full h-full flex items-center justify-start pl-40 pr-4">
@@ -81,7 +82,7 @@
                     found in personal care and cosmetic products. They provide stability, texture, and moisturizing
                     properties to items like soaps, shampoos, lotions, and makeup.</p>
                 <a href="#"
-                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#ffc400] dark:text-black rounded-md font-medium no-underline hover:bg-yellow-300">
+                    class="inline-flex items-center gap-2 px-3 py-1.5 bg-[#ffc300] dark:text-black rounded-md font-medium no-underline hover:bg-yellow-300">
                     Products
                     <svg class="w-4 h-4 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -95,11 +96,126 @@
             </div>
 
         </div>
+    </div> --}}
+
+
+    {{-- <div id="petshopCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active"
+            style="height: 75vh; background-image: url({{ asset('images/bg_konten1.jpg') }}); background-size: cover; background-position: center;">
+            <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
+              <h4>Perawatan untuk Peliharaan yang Anda Cintai</h4>
+          </div>
+          
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item"
+            style="height: 75vh; background-image: url({{ asset('images/bg_konten2.jpg') }}); background-size: cover; background-position: center;">
+            <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
+              <h4>Layanan Terjangkau dan Terpercaya</h4>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item"
+            style="height: 75vh; background-image: url({{ asset('images/bg_konten3.jpg') }}); background-size: cover; background-position: center;">
+            <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
+              <h4>Kebahagiaan Hewan Peliharaan Anda, Prioritas Kami</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#petshopCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#petshopCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> --}}
+
+      
+
+    <div id="animation-carousel" class="relative w-full" data-carousel="static">
+        <!-- Carousel wrapper -->
+        {{-- <div class="relative h-56 overflow-hidden  md:h-96"> --}}
+        <div class="relative h-[30vh] overflow-hidden md:h-[94vh]">
+            <!-- Item 1 -->
+            <div class="hidden duration-300 ease-linear" data-carousel-item>
+                <img src="{{ URL('images/bg_konten4.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                {{-- <div class="carousel-caption d-flex align-items-center justify-content-center" style="position: absolute; bottom: 300px; left: 50%; transform: translateX(-50%); text-align: center; padding: 10px; border-radius: 8px; color: white; width: 80%; max-width: 1200px;">
+                    <h4>Layanan Terjangkau dan Terpercaya</h4>
+                  </div> --}}
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-300 ease-linear" data-carousel-item>
+                <img src="{{ URL('images/bg_konten1.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-300 ease-linear" data-carousel-item="active">
+                <img src="{{ URL('images/bg_konten3.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-300 ease-linear" data-carousel-item>
+                <img src="{{ URL('images/bg_konten2.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 5 -->
+            {{-- <div class="hidden duration-300 ease-linear" data-carousel-item>
+                <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div> --}}
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
     </div>
 
 
+
+    <!-- About Section -->
+  <section
+  class="bg-gray-100 pb-[50px] px py-12 px-6 md:px-20 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+  <div class="md:w-1/2">
+    <img
+      src="https://storage.googleapis.com/a1aa/image/5ed665a7-ec27-4714-565b-9ec36fa526ad.jpg"
+      alt="Illustration of three people standing behind a computer with plants and abstract shapes"
+      class="w-full"
+      width="500"
+      height="300"
+    />
+  </div>
+  <div class="md:w-1/2 space-y-3">
+    <h2 class="text-2xl font-extrabold">
+      About <span class="text-yellow-600">TradeLinkGlobal</span>
+    </h2>
+    <p class="font-semibold text-base">
+      Insights and Resources to help drive your Business Forward Faster.
+    </p>
+    <p class="text-xs leading-tight text-gray-700">
+      We build results-oriented brand strategy and continually refine the
+      campaign for the greatest outcome. From full scale branding strategy,
+      we are reaching to almost desired buyers throughout the world.
+    </p>
+  </div>
+</section>
+
+
     {{-- konten 2 --}}
-    <div class="bg-[#ffc400] pb-[50px]">
+    <div class="bg-white pb-[50px]">
         <div class="flex justify-center">
             <h1 class="text-4xl mt-[50px] mb-5">Services</h1>
         </div>
@@ -115,7 +231,7 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise
                         technology
                         acquisitions of 2021 so far, in reverse chronological order.</p>
                     <a href="#"
@@ -142,7 +258,7 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise
                         technology
                         acquisitions of 2021 so far, in reverse chronological order.</p>
                     <a href="#"
@@ -169,7 +285,7 @@
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                             technology acquisitions 2021</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise
                         technology
                         acquisitions of 2021 so far, in reverse chronological order.</p>
                     <a href="#"
@@ -190,7 +306,7 @@
     {{-- konten 3 --}}
     <div class="grid grid-cols-2 items-center justify-items-center px-20 h-[78vh]">
         <div class="w-full max-w-4xl mx-auto">
-            <img src="/images/5155720_2672334 1.png" class="max-w-full h-auto"
+            <img src="https://storage.googleapis.com/a1aa/image/5ed665a7-ec27-4714-565b-9ec36fa526ad.jpg" class="max-w-full h-auto"
                 alt="">
         </div>
         <div class="flex flex-col justify-center text-left">
@@ -274,7 +390,7 @@
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                         technology acquisitions 2021</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise technology
                     acquisitions of 2021 so far, in reverse chronological order.</p>
                 <a href="#"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -300,7 +416,7 @@
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                         technology acquisitions 2021</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise technology
                     acquisitions of 2021 so far, in reverse chronological order.</p>
                 <a href="#"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -326,7 +442,7 @@
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
                         technology acquisitions 2021</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-300">Here are the biggest enterprise technology
                     acquisitions of 2021 so far, in reverse chronological order.</p>
                 <a href="#"
                     class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -352,7 +468,7 @@
 
                 <div
                     class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                    <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
+                    <svg class="w-7 h-7 text-gray-500 dark:text-gray-300 mb-3" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path
                             d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
@@ -361,7 +477,7 @@
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Need a
                             help in Claim?</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-300">Go to this step by step guideline
                         process on how to certify for your weekly benefits:</p>
                     <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline">
                         See our guideline
@@ -379,7 +495,7 @@
 
                 <div
                     class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                    <svg class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3" aria-hidden="true"
+                    <svg class="w-7 h-7 text-gray-500 dark:text-gray-300 mb-3" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                         <path
                             d="M18 5h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C8.4.842 6.949 0 5.5 0A3.5 3.5 0 0 0 2 3.5c.003.52.123 1.033.351 1.5H2a2 2 0 0 0-2 2v3a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a2 2 0 0 0-2-2ZM8.058 5H5.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM11 13H9v7h2v-7Zm-4 0H2v5a2 2 0 0 0 2 2h3v-7Zm6 0v7h3a2 2 0 0 0 2-2v-5h-5Z" />
@@ -388,7 +504,7 @@
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Need a
                             help in Claim?</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Go to this step by step guideline
+                    <p class="mb-3 font-normal text-gray-500 dark:text-gray-300">Go to this step by step guideline
                         process on how to certify for your weekly benefits:</p>
                     <a href="#" class="inline-flex font-medium items-center text-blue-600 hover:underline">
                         See our guideline
@@ -415,7 +531,7 @@
             <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <ul class="text-gray-500 dark:text-gray-300 font-medium">
                         <li class="mb-4">
                             <a href="#" class=" hover:underline">About</a>
                         </li>
@@ -432,7 +548,7 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <ul class="text-gray-500 dark:text-gray-300 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Discord Server</a>
                         </li>
@@ -449,7 +565,7 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <ul class="text-gray-500 dark:text-gray-300 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Privacy Policy</a>
                         </li>
@@ -463,7 +579,7 @@
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-                    <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                    <ul class="text-gray-500 dark:text-gray-300 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">iOS</a>
                         </li>
@@ -484,7 +600,7 @@
                         href="https://flowbite.com/">Flowbite™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 8 19">
                             <path fill-rule="evenodd"
@@ -493,7 +609,7 @@
                         </svg>
                         <span class="sr-only">Facebook page</span>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 21 16">
                             <path
@@ -501,7 +617,7 @@
                         </svg>
                         <span class="sr-only">Discord community</span>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 20 17">
                             <path fill-rule="evenodd"
@@ -510,7 +626,7 @@
                         </svg>
                         <span class="sr-only">Twitter page</span>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -519,7 +635,7 @@
                         </svg>
                         <span class="sr-only">GitHub account</span>
                     </a>
-                    <a href="#" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+                    <a href="#" class="text-gray-300 hover:text-gray-900 dark:hover:text-white">
                         <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -535,6 +651,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    
 </body>
 
 </html>

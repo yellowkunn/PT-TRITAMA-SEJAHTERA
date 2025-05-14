@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
+Route::get('/2', function () {
+    return view('dashboard_2');
+});
 
 Route::get('/index', function () {
     return view('index');
@@ -26,6 +29,13 @@ Route::get('/tailwind', function () {
 });
 Route::get('/kategori', function () {
     return view('kategori_prod');
+});
+
+Route::get('/nitip', function () {
+    return view('nitip');
+});
+Route::get('/produk', function () {
+    return view('produk');
 });
 
 
