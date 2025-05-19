@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/pepek', function () {
+    return view('pp');
+});
+
 Route::get('/index', function () {
     return view('index');
 });
