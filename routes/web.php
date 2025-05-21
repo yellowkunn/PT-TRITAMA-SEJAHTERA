@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/2', function () {
     return view('/Pages/dashboard_2');
 });
+Route::get('/2', function () {
+    return view('dashboard_2');
+});
 
 Route::get('/index', function () {
     return view('/Pages/index');
@@ -37,4 +40,15 @@ Route::get('/nitip', function () {
 Route::get('/produk', function () {
     return view('/Pages/produk');
 });
+Route::get('/kategori', function () {
+    return view('kategori_prod');
+});
+
+Route::get('/nitip', function () {
+    return view('nitip');
+});
+Route::get('/produk', function () {
+    return view('produk');
+});
+
 

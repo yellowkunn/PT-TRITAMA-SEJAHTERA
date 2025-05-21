@@ -20,6 +20,10 @@
         "@tailwindcss/vite": "^4.1.4",
         "flowbite": "^3.1.2",
         "preline": "^3.0.1",
+<<<<<<< HEAD
+=======
+        "tailwindcss": "^4.1.4",
+>>>>>>> 9efb3940ae2b2fa8085e57d0723227845301c8b5
         "vanilla-calendar-pro": "^3.0.4"
     }
 }
