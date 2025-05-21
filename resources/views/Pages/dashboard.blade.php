@@ -20,223 +20,7 @@
 
 <body>
 
-
-    <header id="navbar"
-        class="fixed inset-x-0 top-0 z-50 mx-auto w-full mt-0 md:mt-6 max-w-screen-md bg-white backdrop-blur-md py-3 shadow-md transition-all duration-300 ease-in-out md:top-6 md:rounded-3xl lg:max-w-screen-lg">
-        <div class="px-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex shrink-0 md:hidden">
-                    {{-- <a aria-current="page" class="flex items-center" href="#">
-                    <img class="h-7 w-auto" src="{{ URL('/images/TRISEINDO ICON.png') }}" alt="Logo">
-                    <p class="sr-only">Website Title</p>
-                </a> --}}
-                </div>
-
-                <!-- Hamburger Button (mobile only) -->
-                <button id="menu-toggle" class="md:hidden text-gray-900 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex md:items-center md:gap-5 mx-auto">
-                    <a href="#"
-                        class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg">Home</a>
-                    <a href="#"
-                        class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg">Company</a>
-
-                    <div class="relative group">
-                        <button id="productDropdownBtn"
-                            class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg inline-flex items-center gap-1">
-                            Product
-                            <svg id="productDropdownIcon" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        <div id="productDropdown"
-                            class="absolute left-0 mt-5 w-40 py-2 hidden flex-col rounded-md bg-white shadow-lg z-50 transition-all duration-300 ease-in-out opacity-0 scale-95">
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                1</a>
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                2</a>
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                3</a>
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                4</a>
-                        </div>
-                    </div>
-
-                    <a href="#"
-                        class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg">Our team</a>
-                    <a href="#"
-                        class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg">Contact Us</a>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="mt-3 hidden flex-col space-y-2 md:hidden">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Home</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Company</a>
-
-                <!-- Product Dropdown (Mobile) -->
-                <div>
-                    <button id="productMobileDropdownBtn"
-                        class="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100 transition-colors">
-                        Product
-                        <svg id="productMobileDropdownIcon" class="w-4 h-4 transform transition-transform duration-300"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div id="productMobileDropdown"
-                        class="hidden flex-col px-4 pt-1 pb-1 space-y-1 transition-all duration-300 ease-in-out opacity-0 scale-95">
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            1</a>
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            2</a>
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            3</a>
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            4</a>
-                    </div>
-                </div>
-
-                <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Our
-                    team</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Contact
-                    Us</a>
-            </div>
-
-        </div>
-
-        <!-- Scroll behavior script -->
-        <script>
-            const navbar = document.getElementById("navbar");
-            const toggleBtn = document.getElementById("menu-toggle");
-            const mobileMenu = document.getElementById("mobile-menu");
-        
-            const productBtn = document.getElementById("productDropdownBtn");
-            const productDropdown = document.getElementById("productDropdown");
-            const productIcon = document.getElementById("productDropdownIcon"); 
-        
-            const productMobileBtn = document.getElementById("productMobileDropdownBtn");
-            const productMobileDropdown = document.getElementById("productMobileDropdown");
-            const productMobileIcon = document.getElementById("productMobileDropdownIcon"); 
-        
-            let lastScrollTop = 0;
-        
-            // Scroll behavior
-            window.addEventListener("scroll", function () {
-                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        
-                if (currentScroll > lastScrollTop) {
-                    // Scroll down: hide navbar
-                    navbar.style.opacity = "0";
-                    navbar.style.transform = "translateY(-20px)";
-                } else {
-                    // Scroll up: show navbar
-                    navbar.style.opacity = "1";
-                    navbar.style.transform = "translateY(0)";
-                }
-        
-                // Hide mobile menu on scroll
-                mobileMenu.classList.add("hidden");
-        
-                // Hide both dropdowns on scroll with transition
-                // Desktop dropdown
-                productDropdown.classList.remove("opacity-100", "scale-100");
-                productDropdown.classList.add("opacity-0", "scale-95");
-                productIcon.classList.remove("rotate-180");
-                setTimeout(() => {
-                    productDropdown.classList.add("hidden");
-                }, 300);
-        
-                // Mobile dropdown
-                productMobileDropdown.classList.remove("opacity-100", "scale-100");
-                productMobileDropdown.classList.add("opacity-0", "scale-95");
-                productMobileIcon.classList.remove("rotate-180");
-                setTimeout(() => {
-                    productMobileDropdown.classList.add("hidden");
-                }, 300);
-        
-                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-            });
-        
-            // Toggle mobile menu
-            toggleBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
-            });
-        
-            // Desktop dropdown toggle
-            productBtn.addEventListener("click", (e) => {
-                e.stopPropagation();
-                const isHidden = productDropdown.classList.contains("hidden");
-        
-                if (isHidden) {
-                    productDropdown.classList.remove("hidden");
-                    requestAnimationFrame(() => {
-                        productDropdown.classList.remove("opacity-0", "scale-95");
-                        productDropdown.classList.add("opacity-100", "scale-100");
-                        productIcon.classList.add("rotate-180");
-                    });
-                } else {
-                    productDropdown.classList.remove("opacity-100", "scale-100");
-                    productDropdown.classList.add("opacity-0", "scale-95");
-                    productIcon.classList.remove("rotate-180");
-                    setTimeout(() => {
-                        productDropdown.classList.add("hidden");
-                    }, 300);
-                }
-            });
-        
-            // Close desktop dropdown if clicked outside
-            window.addEventListener("click", (e) => {
-                if (!productBtn.contains(e.target) && !productDropdown.contains(e.target)) {
-                    productDropdown.classList.remove("opacity-100", "scale-100");
-                    productDropdown.classList.add("opacity-0", "scale-95");
-                    setTimeout(() => {
-                        productDropdown.classList.add("hidden");
-                    }, 300);
-                }
-            });
-        
-            // Mobile dropdown toggle
-            productMobileBtn.addEventListener("click", () => {
-                const isHidden = productMobileDropdown.classList.contains("hidden");
-        
-                if (isHidden) {
-                    productMobileDropdown.classList.remove("hidden");
-                    requestAnimationFrame(() => {
-                        productMobileDropdown.classList.remove("opacity-0", "scale-95");
-                        productMobileDropdown.classList.add("opacity-100", "scale-100");
-                        productMobileIcon.classList.add("rotate-180");
-                    });
-                } else {
-                    productMobileDropdown.classList.remove("opacity-100", "scale-100");
-                    productMobileDropdown.classList.add("opacity-0", "scale-95");
-                    productMobileIcon.classList.remove("rotate-180");
-                    setTimeout(() => {
-                        productMobileDropdown.classList.add("hidden");
-                    }, 300);
-                }
-            });
-        </script>
-        
-
-    </header>
-
+    @include('components.navbar')
 
     {{-- konten 1 --}}
     <div class="w-full h-screen relative overflow-hidden">
@@ -259,7 +43,7 @@
                 </a>
 
 
-                {{-- <p class="mb-5 font-normal text-gray-200 dark:text-gray-200">Palm oil and its derivatives are commonly
+                {{-- <p class="mb-5 font-normal text-gray-200 dark:text-gray-200">Palm oil a    nd its derivatives are commonly
                     found in personal care and cosmetic products. They provide stability, texture, and moisturizing
                     properties to items like soaps, shampoos, lotions, and makeup.</p> --}}
                 <a href="#"
@@ -372,17 +156,25 @@
         </section>
     </div>
 
+        {{-- konten 4 --}}
+    <section class="max-w-7xl mx-auto px-6 md:px-20 py-20 flex flex-col md:flex-row items-center gap-10 ">
+        <div class="md:w-1/2 flex justify-center">
+            <img src="/images/5155720_2672334 1.png" class="rounded-lg max-w-full h-auto" alt="">
+        </div>
+        <div class="md:w-1/2 space-y-6">
+            <h2 class="text-5xl text-black font-extrabold">About <br><span
+                    class="text-5xl text-[#ffc400] md:pl-12">Trade Link Global</span></h2>
+            <p class="text-3xl max-w-xl font-semibold">Insights and Resources to help drive your Business Forward
+                Faster.</p>
+            <p class="text-base text-gray-700 max-w-xl">
+                We build results-oriented brand strategy and continually refine the campaign for the greatest outcome.
+                From full scale branding strategy, we are reaching to almost desired buyers throughout the world.
+            </p>
+        </div>
+    </section>
 
-    {{-- <div class="md:w-1/2 flex justify-center">
-        <img src="https://storage.googleapis.com/a1aa/image/0f65669a-8b70-44e8-58af-35211dcd26b1.jpg"
-            alt="Hand selecting tomatoes in basket with other vegetables and cloth"
-            class="rounded-lg max-w-full h-auto" width="400" height="300" />
-    </div> --}}
-
-
-
-    {{-- konten 4 --}}
-    <div class="bg-white">
+    {{-- konten 5 --}}
+    <div class="bg-gray-100">
         <!-- Slider -->
         <div
             data-hs-carousel='{
@@ -394,7 +186,7 @@
     }
   }'class="relative">
             <div
-                class="hs-carousel w-full overflow-hidden bg-white rounded-lg dark:bg-neutral-900 lg:max-w-[1200px] mx-auto">
+                class="hs-carousel w-full overflow-hidden bg-gray-100 rounded-lg dark:bg-neutral-900 lg:max-w-[1200px] mx-auto">
                 <div class="relative min-h-120 ">
                     <!-- transition-transform duration-700 -->
                     <div
@@ -522,34 +314,11 @@
             <div class="hs-carousel-pagination justify-center absolute bottom-3 start-0 end-0 flex gap-x-2"></div>
         </div>
 
-        {{-- <button type="button"
-            class="hs-carousel-prev hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-s-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
-            <span class="text-2xl" aria-hidden="true">
-                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m15 18-6-6 6-6"></path>
-                </svg>
-            </span>
-            <span class="sr-only">Previous</span>
-        </button>
-        <button type="button"
-            class="hs-carousel-next hs-carousel-disabled:opacity-50 hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-11.5 h-full text-gray-800 hover:bg-gray-800/10 focus:outline-hidden focus:bg-gray-800/10 rounded-e-lg dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10">
-            <span class="sr-only">Next</span>
-            <span class="text-2xl" aria-hidden="true">
-                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="m9 18 6-6-6-6"></path>
-                </svg>
-            </span>
-        </button> --}}
-
     </div>
     <!-- End Slider -->
 
     {{-- Konten 5 --}}
-    <div class="flex flex-col items-center justify-center bg-gray-100 py-20">
+    <div class="flex flex-col items-center justify-center bg-white py-20">
         <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
         <div class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
             <div

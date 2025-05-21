@@ -14,18 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('/Pages/dashboard');
 });
-
-Route::get('/pepek', function () {
-    return view('pp');
+Route::get('/2', function () {
+    return view('/Pages/dashboard_2');
 });
 
 Route::get('/index', function () {
-    return view('index');
+    return view('/Pages/index');
 });
 
 Route::get('/tailwind', function () {
-    return view('tailwind');
+    return view('t/Pages/tailwind');
+});
+Route::get('/kategori', function () {
+    return view('/Pages/kategori_prod');
+});
+
+Route::get('/nitip', function () {
+    return view('/Pages/nitip');
+});
+Route::get('/produk', function () {
+    return view('/Pages/produk');
 });
 
