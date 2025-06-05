@@ -11,51 +11,31 @@
         @endif
         <form action="/tambahproduk" method="POST" enctype="multipart/form-data">
             @csrf
-            {{-- <div class="form-group">
-                <label for="kategori">Kategori:</label>
-                @if (isset($kategori) && count($kategori) > 0)
-                <select name="kategori" id="kategori" class="input-control" onChange="getSubCat(this.value);" required>
-                    <option value="">--Pilih--</option>
-                    @foreach ($kategori as $k)
-                    <option value="{{ $k->ID_Kategori }}">{{ $k->Nama_Kategori }}</option>
-                    @endforeach
-                </select>
-                @else
-                <p>Tidak ada kategori yang tersedia.</p>
-                @endif
-            </div> --}}
-
             <div class="form-group">
-                <label for="kategori">Kategori:</label>
-                @if (isset($kategori) && count($kategori) > 0)
-                <select name="kategori" id="kategori" class="input-control" onChange="getSubCat(this.value);" required>
-                    <option value="Nama Barang">--Pilih--</option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-
+                <label for="category_id">Kategori:</label>
+                <select name="category_id" id="category_id" class="input-control" onChange="getSubCat(this.value);" required>
+                    <option value="">--Pilih--</option>
+                    <option value="1">Vegetables</option>
+                    <option value="2">Woods</option>
+                    <option value="3">brickets</option>
                 </select>
-                @else
-                <p>Tidak ada kategori yang tersedia.</p>
-                @endif
             </div>
 
-            <label for="nama" style="text-align: left; display: block; margin-bottom: 5px;">Product:</label>
-            <input type="text" name="nama" id="nama" class="input-control" placeholder="Nama Barang" required>
+            <label for="name" style="text-align: left; display: block; margin-bottom: 5px;">Product:</label>
+            <input type="text" name="name" id="name" class="input-control" placeholder="Nama Barang" required>
 
             {{-- <label for="harga" style="text-align: left; display: block; margin-bottom: 5px;">Harga:</label>
             <input type="number" name="harga" id="harga" class="input-control" placeholder="Harga" required> --}}
 
-            <label for="stok" style="text-align: left; display: block; margin-bottom: 5px;">Stock:</label>
-            <input type="number" name="stok" id="stok" class="input-control" placeholder="Stok" required>
+            <label for="quantity" style="text-align: left; display: block; margin-bottom: 5px;">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" class="input-control" placeholder="quantity" required>
 
-            <label for="deskripsi" style="text-align: left; display: block; margin-bottom: 5px;">Description</label>
-            <textarea name="deskripsi" placeholder="deskripsi" class="input-control" cols="30" rows="10"></textarea>
+            <label for="description" style="text-align: left; display: block; margin-bottom: 5px;">Description</label>
+            <textarea name="description" placeholder="description" class="input-control" cols="30" rows="10"></textarea>
 
-            <label for="deskripsi_pengiriman" style="text-align: left; display: block; margin-bottom: 5px;">Shipping
+            <label for="shipping_information" style="text-align: left; display: block; margin-bottom: 5px;">Shipping
                 Information</label>
-            <textarea name="deskripsi_pengiriman" placeholder="deskripsi" class="input-control" cols="30"
+            <textarea name="shipping_information" placeholder="shipping information" class="input-control" cols="30"
                 rows="10"></textarea>
 
             <label for="gambar" style="text-align: left; display: block; margin-bottom: 5px;">Image:</label>

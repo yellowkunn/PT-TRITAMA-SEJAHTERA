@@ -56,7 +56,7 @@ Route::get('/produk', function () {
 // admin
 Route::get('/Admin-dashboard', [AdminController::class, 'dashboardadmin']);    
 Route::post('/tambahproduk', [AdminController::class, 'tambah_product']);
-Route::get('/Admin-data_produk', [AdminController::class, 'tambahbarang']);
+Route::get('/Admin-tambah_produk', [AdminController::class, 'tambahbarang']);
 
 
 
