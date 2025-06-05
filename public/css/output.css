@@ -387,11 +387,17 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-0 {
+    margin-block: calc(var(--spacing) * 0);
+  }
   .my-1 {
     margin-block: calc(var(--spacing) * 1);
   }
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
+  }
+  .my-auto {
+    margin-block: auto;
   }
   .\!ms-auto {
     margin-inline-start: auto !important;
@@ -407,6 +413,9 @@
   }
   .\!me-1\.5 {
     margin-inline-end: calc(var(--spacing) * 1.5) !important;
+  }
+  .me-2 {
+    margin-inline-end: calc(var(--spacing) * 2);
   }
   .-mt-px {
     margin-top: -1px;
@@ -986,6 +995,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
   .border-3 {
     border-style: var(--tw-border-style);
     border-width: 3px;
@@ -1276,6 +1289,9 @@
   }
   .align-bottom {
     vertical-align: bottom;
+  }
+  .align-text-top {
+    vertical-align: text-top;
   }
   .\!text-2xl {
     font-size: var(--text-2xl) !important;

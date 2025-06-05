@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +52,11 @@ Route::get('/nitip', function () {
 Route::get('/produk', function () {
     return view('produk');
 });
+
+// admin
+Route::get('/Admin-dashboard', [AdminController::class, 'dashboardadmin']);    
+Route::post('/tambahproduk', [AdminController::class, 'tambah_product']);
+Route::get('/Admin-data_produk', [AdminController::class, 'tambahbarang']);
+
 
 

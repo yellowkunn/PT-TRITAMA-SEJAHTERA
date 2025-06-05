@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            // $table->decimal('price', 10, 2)->nullable();
+            $table->text('shipping_information')->nullable();
             $table->string('image')->nullable();
-            $table->unsignedBigInteger('category_id');
+            // $table->unsignedBigInteger('category_id');
             $table->timestamps();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
