@@ -1,0 +1,342 @@
+.hero-wrap {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('/images/jejakkaki.png');
+    background-color: #ffffff;
+    background-size: cover; /* Mengatur ukuran gambar untuk menutupi seluruh elemen */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: repeat; /* Mencegah pengulangan gambar */
+    height: 100vh; /* Pastikan elemen body memiliki tinggi penuh */
+   
+  
+}
+.box {
+    margin-bottom: 60px;
+    margin-top: -60px;
+}
+
+.card {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+.cards {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.card-text{
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.cards:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 8px 12px rgba(0, 255, 191, 0.901);
+}
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-body h5 {
+    color: black; /* Warna teks menjadi hitam */
+    font-weight: bold; /* Opsional: membuat teks lebih menonjol */
+}
+
+.card-body p {
+    color: black; /* Warna teks paragraf menjadi hitam */
+}
+
+.card-bodys p {
+    color: rgb(234, 231, 231); /* Warna teks paragraf menjadi hitam */
+}
+
+
+.tes:hover {
+    transform: scale(1.0);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+
+.box2 {
+    background-color: linear-gradient(to top, #f7f4f4,    #A0E5FF); /* Ubah nilai alpha sesuai kebutuhan (0 = transparan, 1 = tidak transparan) */
+    padding-bottom: 12px;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white;
+}
+
+.navbar {
+    background-color: black !important;
+}
+
+.img-fluid {
+    margin-top: 47px;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-fluid:hover {
+    transform: scale(1.1);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.img-bordered {
+    border: 6px solid #fbd309;
+    border-radius: 200px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: Tambahkan bayangan */
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 5px 10px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+.img-fluidd {
+    width: 350px;
+    height: 300px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-fluidd:hover {
+    transform: scale(1.1);
+}
+
+.text-left {
+    text-align: left;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 5px 10px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    background-color:#fec748;
+    border: 1px solid;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.booking{
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    background-color:#000000;
+    color: #fec748  ;
+    border: 1px solid ;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.booking:hover {
+    background-color: #212529;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+      transition: none;
+    }
+  }
+
+.btn:hover {
+  color: #212529;
+  border-color: black;
+  background-color: #f7b620;
+}
+
+.btn:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 0.65;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events:none;
+}
+
+.boxImage {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.boxImageKeranjang {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.boxImageKeranjang img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-fluidd-tes {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* .status {
+    background-color: #f7b620 !important;
+    border-radius: 50px;
+} */
+
+.boxx{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 0 25px 0;
+}
+.boxx::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table tr{
+    height: 30px;
+}
+.table tr td{
+    padding:5px 10px;
+}
+.col-2 table{
+    text-align: left
+    ;
+}
+
+.table2 th{
+    background-color: rgb(248, 94, 94);
+}
+
+
+.table2 td{
+    background-color: rgb(248, 94, 94);
+}
+
+
+.plusminus{
+    width: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 3px;
+    padding-bottom: 4px;
+}
+
+.tpm {
+    width: 100px;
+    padding-bottom:3px;
+    text-align:center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.cari {
+    background-color: rgb(38, 163, 77); /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan garis batas tombol */
+    padding: 10px 20px; /* Ruang dalam tombol */
+    text-align: center; /* Pusatkan teks */
+    text-decoration: none; /* Hapus dekorasi tautan */
+    display: inline-block; /* Membuat tombol menjadi elemen blok yang dapat disesuaikan */
+    font-size: 16px; /* Ukuran teks tombol */
+    cursor: pointer; /* Ganti kursor saat diarahkan ke tombol */
+    border-radius: 5px; /* Tambahkan sudut melengkung pada tombol */
+}
+
+.cari:hover {
+    background-color: #45a049; /* Warna latar belakang saat kursor diarahkan pada tombol */
+}
+
+.carousel-caption {
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f5d7a6;
+  }
+  
+  .carousel-caption h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    background: #0000002b;
+}
