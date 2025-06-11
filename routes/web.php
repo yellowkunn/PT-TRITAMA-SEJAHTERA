@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +14,10 @@ use App\Http\Controllers\AdminController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/tambahproduk', [AdminController::class, 'tambahbarang']);
 
-Route::get('/', function () {
-    return view('/Pages/dashboard');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 Route::get('/2', function () {
     return view('/Pages/dashboard_2');
 });
@@ -54,9 +54,15 @@ Route::get('/produk', function () {
 });
 
 // admin
-Route::get('/Admin-dashboard', [AdminController::class, 'dashboardadmin']);    
-Route::post('/tambahproduk', [AdminController::class, 'tambah_product']);
-Route::get('/Admin-tambah_produk', [AdminController::class, 'tambahbarang']);
+Route::get('/Admin-dashboard', [AdminController::class, 'dashboardadmin']);
+
+Route::post('/tambahproduk', [AdminController::class, 'kirim_produk']);
+Route::get('/tambahproduk', [AdminController::class, 'tambahbarang']);
+
+Route::post('/tambahkategori', [AdminController::class, 'kirim_kategori']);
+Route::get('/tambahkategori', [AdminController::class, 'tambahkategori']);
+
+Route::get('/kategori/{name}', [HomeController::class, 'show'])->name('kategori.show');
 
 
 

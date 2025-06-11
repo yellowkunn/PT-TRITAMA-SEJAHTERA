@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 
@@ -14,19 +15,14 @@ class AdminController extends Controller
     {
         return view('Admin.Admin-dashboard');
     }
-    //     public function datapengguna(){
-    //         $pelanggan = User::where('peran', '=', 'pelanggan')
-    //         ->paginate(5);
-    //         return view ('admin.data-pengguna', compact('pelanggan'));
-    //     }
-
 
     public function tambahbarang()
     {
-        return view('Admin.Admin-tambah_produk');
+        $categories = Category::all();
+        return view('Admin.Admin-tambah_produk', compact('categories'));
     }
 
-    public function tambah_product(Request $request)
+    public function kirim_produk(Request $request)
     {
         // Validasi input
         $validate = $request->validate([
@@ -56,5 +52,36 @@ class AdminController extends Controller
 
 
         return redirect()->back()->with('success', 'Produk berhasil ditambahkan!');
+    }
+
+
+    public function tambahkategori()
+    {
+        return view('Admin.Admin-tambah_kategori');
+    }
+
+    public function kirim_kategori(Request $request)
+    {
+        // Validasi input
+        $validate = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        // Menyimpan file gambar
+        $file = $request->file('gambar');
+        $extension = $file->getClientOriginalExtension();
+        $nama_file = 'file_' . date('YmdHis') . '.' . $extension;
+        $file->move(public_path('gambar_produk'), $nama_file);
+        $berkas = '' . $nama_file;
+
+        Category::create([
+            'name' => $validate['name'],
+            'description' => $validate['description'],
+            'image' => $berkas,
+        ]);
+
+        return redirect()->back()->with('success', 'Kategori berhasil ditambahkan!');
     }
 }

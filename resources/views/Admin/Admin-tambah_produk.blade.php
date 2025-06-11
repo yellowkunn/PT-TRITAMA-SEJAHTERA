@@ -1,7 +1,7 @@
 @extends('Admin.MainAdmin')
 @section('container')
     <div class="container" style="min-height: 100vh;">
-        <h3>Tambah Data Barang</h3>
+        <h3 class="p-5">Tambah Data Barang</h3>
         <div class="box">
             @if (session()->has('success'))
                 <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
@@ -30,11 +30,14 @@
                     <label for="category_id">Kategori:</label>
                     <select name="category_id" id="category_id" class="input-control" onChange="getSubCat(this.value);"
                         required>
-                        <option value="">--Pilih--</option>
-                        <option value="1">Vegetables</option>
-                        <option value="2">Woods</option>
-                        <option value="3">brickets</option>
+                        <option value="">Pilih</option>
+                        @forelse ($categories as $kategori)
+                            <option value="{{ $kategori->id }}">{{ $kategori->name }}</option>
+                        @empty
+                            <option value="">Tidak ada kategori tersedia</option>
+                        @endforelse
                     </select>
+
                 </div>
 
                 <label for="name" style="text-align: left; display: block; margin-bottom: 5px;">Product:</label>

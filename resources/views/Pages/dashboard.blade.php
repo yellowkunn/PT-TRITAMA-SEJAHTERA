@@ -133,8 +133,8 @@
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none">
                         <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="M5 1 1 5l4 4" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
                         </svg>
                         <span class="sr-only">Previous</span>
                     </span>
@@ -146,8 +146,8 @@
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none">
                         <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="m1 9 4-4-4-4" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
                         </svg>
                         <span class="sr-only">Next</span>
                     </span>
@@ -156,7 +156,7 @@
         </section>
     </div>
 
-        {{-- konten 4 --}}
+    {{-- konten 4 --}}
     <section class="max-w-7xl mx-auto px-6 md:px-20 py-20 flex flex-col md:flex-row items-center gap-10 ">
         <div class="md:w-1/2 flex justify-center">
             <img src="/images/5155720_2672334 1.png" class="rounded-lg max-w-full h-auto" alt="">
@@ -192,122 +192,36 @@
                     <div
                         class="hs-carousel-body flex items-center justify-center opacity-0 transition-transform duration-700 py-20">
 
-                        <div class="hs-carousel-slide">
-                            <div class="flex flex-col items-center justify-center h-full">
-                                <div
-                                    class="flex flex-col bg-white rounded-lg shadow-lg max-w-xs w-full overflow-hidden dark:bg-neutral-800">
-                                    <!-- Gambar -->
-                                    <div class="overflow-hidden group">
-                                        <img src="https://storage.googleapis.com/a1aa/image/7d312398-c4d5-488b-be70-1740b696a65b.jpg"
-                                            alt="Steel products stacked in warehouse with metal sheets"
-                                            class="w-full h-60 object-cover transition-transform duration-500 ease-out group-hover:scale-110 rounded-t-lg"
-                                            width="400" height="240" />
-                                    </div>
+                        @foreach ($categories as $kategori)
+                            <div class="hs-carousel-slide">
+                                <div class="flex flex-col items-center justify-center h-full">
+                                    <div
+                                        class="flex flex-col bg-white rounded-lg shadow-lg max-w-xs w-full overflow-hidden dark:bg-neutral-800">
+                                        <!-- Gambar -->
+                                        <div class="overflow-hidden group">
+                                            <img src="{{ asset('gambar_produk/' . $kategori->image) }}"
+                                                alt="Steel products stacked in warehouse with metal sheets"
+                                                class="w-full h-60 object-cover transition-transform duration-500 ease-out group-hover:scale-110 rounded-t-lg"
+                                                width="400" height="240" />
+                                        </div>
 
-                                    <!-- Konten -->
-                                    <div class="p-4 flex flex-col flex-grow">
-                                        <h4 class="text-lg font-semibold text-yellow-600 text-center mb-2">Steel
-                                            Products</h4>
-                                        <p class="text-xs text-center text-gray-700 dark:text-gray-300 flex-grow">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, dicta
-                                            necessitatibus
-                                        </p>
-                                        <button
-                                            class="mt-4 py-2 bg-black text-yellow-400 text-xs font-semibold rounded shadow hover:shadow-lg transition-shadow">
-                                            Read more
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="hs-carousel-slide ">
-                            <div class="flex flex-col items-center justify-center h-full">
-                                <div
-                                    class="flex flex-col bg-white rounded-lg shadow-lg max-w-xs w-full overflow-hidden dark:bg-neutral-800">
-                                    <!-- Gambar -->
-                                    <div class="overflow-hidden group">
-                                        <img src="https://storage.googleapis.com/a1aa/image/7d312398-c4d5-488b-be70-1740b696a65b.jpg"
-                                            alt="Steel products stacked in warehouse with metal sheets"
-                                            class="w-full h-60 object-cover transition-transform duration-500 ease-out group-hover:scale-110 rounded-t-lg"
-                                            width="400" height="240" />
-                                    </div>
-
-                                    <!-- Konten -->
-                                    <div class="p-4 flex flex-col flex-grow">
-                                        <h4 class="text-lg font-semibold text-yellow-600 text-center mb-2">Steel
-                                            Products</h4>
-                                        <p class="text-xs text-center text-gray-700 dark:text-gray-300 flex-grow">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, dicta
-                                            necessitatibus
-                                        </p>
-                                        <button
-                                            class="mt-4 py-2 bg-black text-yellow-400 text-xs font-semibold rounded shadow hover:shadow-lg transition-shadow">
-                                            Read more
-                                        </button>
+                                        <!-- Konten -->
+                                        <div class="p-4 flex flex-col flex-grow">
+                                            <h4 class="text-lg font-semibold text-yellow-600 text-center mb-2">
+                                                {{ $kategori->name }}</h4>
+                                            <p class="text-xs text-center text-gray-700 flex-grow">
+                                                {{ $kategori->description }}
+                                            </p>
+                                            <a href="{{ route('kategori.show', ['name' => $kategori->name]) }}"
+                                                class="mt-4 py-2 bg-black text-yellow-400 text-xs font-semibold rounded shadow hover:shadow-lg transition-shadow text-center block">
+                                                See more
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
-
-                        </div>
-                        <div class="hs-carousel-slide ">
-                            <div class="flex flex-col items-center justify-center h-full">
-                                <div
-                                    class="flex flex-col bg-white rounded-lg shadow-lg max-w-xs w-full overflow-hidden dark:bg-neutral-800">
-                                    <!-- Gambar -->
-                                    <div class="overflow-hidden group">
-                                        <img src="https://storage.googleapis.com/a1aa/image/7d312398-c4d5-488b-be70-1740b696a65b.jpg"
-                                            alt="Steel products stacked in warehouse with metal sheets"
-                                            class="w-full h-60 object-cover transition-transform duration-500 ease-out group-hover:scale-110 rounded-t-lg"
-                                            width="400" height="240" />
-                                    </div>
-
-                                    <!-- Konten -->
-                                    <div class="p-4 flex flex-col flex-grow">
-                                        <h4 class="text-lg font-semibold text-yellow-600 text-center mb-2">Steel
-                                            Products</h4>
-                                        <p class="text-xs text-center text-gray-700 dark:text-gray-300 flex-grow">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, dicta
-                                            necessitatibus
-                                        </p>
-                                        <button
-                                            class="mt-4 py-2 bg-black text-yellow-400 text-xs font-semibold rounded shadow hover:shadow-lg transition-shadow">
-                                            Read more
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="hs-carousel-slide ">
-                            <div class="flex flex-col items-center justify-center h-full">
-                                <div
-                                    class="flex flex-col bg-white rounded-lg shadow-lg max-w-xs w-full overflow-hidden dark:bg-neutral-800">
-                                    <!-- Gambar -->
-                                    <div class="overflow-hidden group">
-                                        <img src="https://storage.googleapis.com/a1aa/image/7d312398-c4d5-488b-be70-1740b696a65b.jpg"
-                                            alt="Steel products stacked in warehouse with metal sheets"
-                                            class="w-full h-60 object-cover transition-transform duration-500 ease-out group-hover:scale-110 rounded-t-lg"
-                                            width="400" height="240" />
-                                    </div>
-
-                                    <!-- Konten -->
-                                    <div class="p-4 flex flex-col flex-grow">
-                                        <h4 class="text-lg font-semibold text-yellow-600 text-center mb-2">Steel
-                                            Products</h4>
-                                        <p class="text-xs text-center text-gray-700 dark:text-gray-300 flex-grow">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, dicta
-                                            necessitatibus
-                                        </p>
-                                        <button
-                                            class="mt-4 py-2 bg-black text-yellow-400 text-xs font-semibold rounded shadow hover:shadow-lg transition-shadow">
-                                            Read more
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -319,7 +233,9 @@
 
     {{-- Konten 5 --}}
     <div class="flex flex-col items-center justify-center bg-white py-20">
-        <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
+        <div id="our-team">
+            <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
+        </div>
         <div class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
             <div
                 class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
@@ -332,25 +248,28 @@
                     class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
                 </div>
                 <div
-                class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
-                <h1 class="font-dmserif text-3xl font-bold text-white">Beauty</h1>
-                <p
-                    class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-            
-                <div class="flex gap-4">
-                    <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                        <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1" class="w-full h-full object-cover">
-                    </button>
-                    <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                        <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2" class="w-full h-full object-cover">
-                    </button>
-                    <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                        <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3" class="w-full h-full object-cover">
-                    </button>
+                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                    <h1 class="font-dmserif text-3xl font-bold text-white">Beauty</h1>
+                    <p
+                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+
+                    <div class="flex gap-4">
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                class="w-full h-full object-cover">
+                        </button>
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                class="w-full h-full object-cover">
+                        </button>
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                class="w-full h-full object-cover">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            
+
             </div>
             <div
                 class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
@@ -368,17 +287,20 @@
                     <p
                         class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-                        <div class="flex gap-4">
-                            <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1" class="w-full h-full object-cover">
-                            </button>
-                            <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2" class="w-full h-full object-cover">
-                            </button>
-                            <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3" class="w-full h-full object-cover">
-                            </button>
-                        </div>
+                    <div class="flex gap-4">
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                class="w-full h-full object-cover">
+                        </button>
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                class="w-full h-full object-cover">
+                        </button>
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                class="w-full h-full object-cover">
+                        </button>
+                    </div>
                 </div>
             </div>
             <div
@@ -397,17 +319,20 @@
                     <p
                         class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-                        <div class="flex gap-4">
-                            <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1" class="w-full h-full object-cover">
-                            </button>
-                            <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2" class="w-full h-full object-cover">
-                            </button>
-                            <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3" class="w-full h-full object-cover">
-                            </button>
-                        </div>
+                    <div class="flex gap-4">
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                class="w-full h-full object-cover">
+                        </button>
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                class="w-full h-full object-cover">
+                        </button>
+                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                class="w-full h-full object-cover">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

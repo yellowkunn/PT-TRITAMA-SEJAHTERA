@@ -20,7 +20,7 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex md:items-center md:gap-5 mx-auto">
-                    <a href="#"
+                    <a href="/"
                         class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg">Home</a>
                     <div class="relative group">
                         <button id="companyDropdownBtn"
@@ -57,29 +57,22 @@
                         </button>
                         <div id="productDropdown"
                             class="absolute left-0 mt-5 w-40 py-2 hidden flex-col rounded-md bg-white shadow-lg z-50 transition-all duration-300 ease-in-out opacity-0 scale-95">
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                1</a>
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                2</a>
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                3</a>
-                            <a href="#"
-                                class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">Product
-                                4</a>
+                            @foreach ($categories as $item)
+                                <a href="{{ route('kategori.show', ['name' => $item->name]) }}"
+                                    class="block w-full px-4 py-1 my-1 text-sm text-gray-700 hover:bg-gray-100">{{ $item->name }}
+                                </a>
+                            @endforeach
                         </div>
                     </div>
 
-                    <a href="#"
+                    <a href="{{ route('home') }}#our-team"
                         class="px-2 py-1 text-sm font-medium text-gray-900 hover:bg-white/30 rounded-lg">Our team</a>
                 </div>
             </div>
 
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="mt-3 hidden flex-col space-y-2 md:hidden">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Home</a>
+                <a href="/" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Home</a>
                 <div>
                     <button id="companyMobileDropdownBtn"
                         class="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100 transition-colors">
@@ -113,22 +106,15 @@
                     </button>
                     <div id="productMobileDropdown"
                         class="hidden flex-col px-4 pt-1 pb-1 space-y-1 transition-all duration-300 ease-in-out opacity-0 scale-95">
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            1</a>
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            2</a>
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            3</a>
-                        <a href="#"
-                            class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">Product
-                            4</a>
+                        @foreach ($categories as $item)
+                            <a href="{{ route('kategori.show', ['name' => $item->name]) }}" <a href="#"
+                                class="block w-full py-1 pl-4 text-sm text-gray-700 rounded-lg hover:bg-gray-100">{{ $item->name }}</a>
+                        @endforeach
                     </div>
                 </div>
 
-                <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Our
+                <a href="{{ route('home') }}#our-team"
+                    class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Our
                     team</a>
                 <a href="#" class="block px-4 py-2 text-sm text-gray-900 rounded-lg hover:bg-gray-100">Contact
                     Us</a>
@@ -190,7 +176,7 @@
             }
 
             // --- Scroll behavior ---
-            window.addEventListener("scroll", function () {
+            window.addEventListener("scroll", function() {
                 const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
                 if (currentScroll > lastScrollTop) {
