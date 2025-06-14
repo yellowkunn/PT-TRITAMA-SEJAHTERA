@@ -24,7 +24,7 @@
                 </script>
             @endif
 
-            <form action="/tambahkategori" method="POST" enctype="multipart/form-data">
+            <form action="/admin/tambahkategori" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <label for="name" style="text-align: left; display: block; margin-bottom: 5px;">Product:</label>

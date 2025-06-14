@@ -138,7 +138,7 @@
 
                 const categoryId = this.getAttribute('data-id');
 
-                fetch(`/filter-products/${categoryId}`)
+                fetch(`/admin/filter-products/${categoryId}`)
                     .then(response => response.json())
                     .then(data => {
                         document.getElementById('produk-container').innerHTML = data.html;
@@ -187,7 +187,7 @@
 
             if (!confirm("Apakah Anda yakin ingin menghapus produk yang dipilih?")) return;
 
-            fetch("/delete-products", {
+            fetch("/admin/delete-products", {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json',

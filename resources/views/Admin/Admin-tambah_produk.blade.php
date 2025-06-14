@@ -22,7 +22,7 @@
             </div>
         @endif
 
-        <form action="/tambahproduk" method="POST" enctype="multipart/form-data">
+        <form action="/admin/tambahproduk" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="category_id">Kategori:</label>
