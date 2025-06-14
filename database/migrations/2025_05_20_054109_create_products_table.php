@@ -15,10 +15,10 @@ return new class extends Migration
         $table->id('id_product');
         $table->string('name');
         $table->integer('quantity');
-        $table->text('description')->nullable();
+        $table->string('from');
+        $table->string('condition');
         $table->text('shipping_information')->nullable();
-        $table->string('image')->nullable();
-        $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+        $table->foreignId('category_id')->constrained('categories')->onDelete('cascade')->onUpdate('cascade');
         $table->timestamps();
         });
     }

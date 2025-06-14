@@ -53,6 +53,15 @@ Route::get('/produk', function () {
     return view('produk');
 });
 
+
+// Pages
+Route::get('/aboutus', [HomeController::class, 'aboutus']);
+Route::get('/detailproduk/{name}', [HomeController::class, 'detailproduk'])->name('detailproduk.show');
+
+Route::get('/produkdetail/{name}', [HomeController::class, 'showproduct'])->name('produkdetail.show');
+
+Route::get('/kategori/{name}', [HomeController::class, 'show'])->name('kategori.show');
+
 // admin
 Route::get('/Admin-dashboard', [AdminController::class, 'dashboardadmin']);
 
@@ -62,7 +71,13 @@ Route::get('/tambahproduk', [AdminController::class, 'tambahbarang']);
 Route::post('/tambahkategori', [AdminController::class, 'kirim_kategori']);
 Route::get('/tambahkategori', [AdminController::class, 'tambahkategori']);
 
-Route::get('/kategori/{name}', [HomeController::class, 'show'])->name('kategori.show');
+Route::get('/editproduk', [AdminController::class, 'editproducts']);
 
+Route::get('/filter-products/{category_id?}', [AdminController::class, 'filterProducts']);
 
+Route::post('/delete-products', [AdminController::class, 'deleteProducts']);
+
+Route::get('/produkeditdetail/{id}', [AdminController::class, 'showeditproduct'])->name('produkeditdetail.show');
+
+Route::put('/editproduk/{id_product}', [AdminController::class, 'update'])->name('product.update');
 

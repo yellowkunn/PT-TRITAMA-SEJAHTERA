@@ -10,6 +10,7 @@ class Category extends Model
     protected $primaryKey = 'id';
     protected $guarded = ['id'];
     public $timestamps = false;
+    
     protected $table = 'categories';
     public function products()
     {

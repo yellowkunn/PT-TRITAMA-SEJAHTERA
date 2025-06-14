@@ -28,8 +28,7 @@
                 @csrf
 
                 <label for="name" style="text-align: left; display: block; margin-bottom: 5px;">Product:</label>
-                <input type="text" name="name" id="name" class="input-control" placeholder=""
-                    required>
+                <input type="text" name="name" id="name" class="input-control" placeholder="" required>
                 <label for="description" style="text-align: left; display: block; margin-bottom: 5px;">Description:</label>
                 <textarea name="description" placeholder="" class="input-control" cols="30" rows="10"></textarea>
 

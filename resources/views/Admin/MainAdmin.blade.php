@@ -20,8 +20,142 @@
 
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
 
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 40px 20px;
+        background: #fff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+    }
 
+    h3 {
+        font-size: 1.75rem;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .form-group, .input-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .btn {
+        display: inline-block;
+        /* background-color: #007bff; */
+        color: #fff;
+        border: none;
+        padding: 10px 16px;
+        font-size: 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .alert {
+        padding: 10px 16px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+    .alert-success {
+        background-color: #d1e7dd;
+        color: #0f5132;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #842029;
+    }
+
+    #preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 15px;
+    }
+
+    .preview-box {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+    .preview-box:hover {
+        transform: scale(1.05);
+    }
+
+    .preview-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .remove-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: rgba(255, 0, 0, 0.75);
+        border: none;
+        color: white;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease;
+    }
+
+    .remove-btn:hover {
+        background-color: rgba(255, 0, 0, 0.95);
+    }
+</style>
 </head>
 
 <body id="page-top">
@@ -54,7 +188,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Kelompok 5 MPTI 2024</span>
+                        <span>Copyright &copy; Tritama 2025</span>
                     </div>
                 </div>
             </footer>

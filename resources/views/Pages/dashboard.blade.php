@@ -232,107 +232,317 @@
     <!-- End Slider -->
 
     {{-- Konten 5 --}}
+    {{-- Konten 5 --}}
     <div class="flex flex-col items-center justify-center bg-white py-20">
-        <div id="our-team">
-            <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
-        </div>
-        <div class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
+        <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
+        <!-- Slider -->
+        <div
+            data-hs-carousel='{
+    "loadingClasses": "opacity-0", "dotsItemClasses": "hs-carousel-active:bg-blue-700 hs-carousel-active:border-blue-700 size-3 border border-gray-400 rounded-full cursor-pointer dark:border-neutral-600 dark:hs-carousel-active:bg-blue-500 dark:hs-carousel-active:border-blue-500",
+    "slidesQty": {
+      "xs": 1,
+      "md": 2,
+      "lg": 3
+    }
+  }'class="relative">
             <div
-                class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-                <div class="h-96 w-80">
-                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
-                        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                        alt="" />
-                </div>
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
-                </div>
-                <div
-                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
-                    <h1 class="font-dmserif text-3xl font-bold text-white">Beauty</h1>
-                    <p
-                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
+                class="hs-carousel w-full overflow-hidden bg-gray-100 rounded-lg dark:bg-neutral-900 lg:max-w-[1200px] mx-auto">
+                <div class="relative min-h-120 ">
+                    <!-- transition-transform duration-700 -->
+                    <div
+                        class="hs-carousel-body flex items-center justify-center opacity-0 transition-transform duration-700 py-20">
 
-                    <div class="flex gap-4">
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
-                                class="w-full h-full object-cover">
-                        </button>
-                    </div>
-                </div>
+                        <div class="hs-carousel-slide ">
+                            <div class="flex flex-col items-center justify-center h-full">
+                                <div
+                                    class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                    <div class="h-96 w-80">
+                                        <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                            src="{{ URL('images/KOMISARIS FM.png') }}" alt="" />
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                        <h1 class="font-dmserif text-3xl font-bold text-white"></h1>
+                                        <p
+                                            class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
+                                            adipisci placeat.</p>
 
-            </div>
-            <div
-                class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-                <div class="h-96 w-80">
-                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
-                        src="https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-                        alt="" />
-                </div>
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
-                </div>
-                <div
-                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
-                    <h1 class="font-dmserif text-3xl font-bold text-white">Beyond Builder</h1>
-                    <p
-                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-                    <div class="flex gap-4">
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
-                                class="w-full h-full object-cover">
-                        </button>
+                                        <div class="flex gap-4">
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="hs-carousel-slide ">
+                            <div class="flex flex-col items-center justify-center h-full">
+                                <div
+                                    class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                    <div class="h-96 w-80">
+                                        <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                            src="{{ URL('images/FP.png') }}" alt="" />
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                        <h1 class="font-dmserif text-3xl font-bold text-white"></h1>
+                                        <p
+                                            class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
+                                            adipisci placeat.</p>
+
+                                        <div class="flex gap-4">
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="hs-carousel-slide ">
+                            <div class="flex flex-col items-center justify-center h-full">
+                                <div
+                                    class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                    <div class="h-96 w-80">
+                                        <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                            src="{{ URL('images/Farhan jas.png') }}" alt="" />
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                        <h1 class="font-dmserif text-3xl font-bold text-white"></h1>
+                                        <p
+                                            class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
+                                            adipisci placeat.</p>
+
+                                        <div class="flex gap-4">
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="hs-carousel-slide ">
+                            <div class="flex flex-col items-center justify-center h-full">
+                                <div
+                                    class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                    <div class="h-96 w-80">
+                                        <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                            src="{{ URL('images/am.png') }}" alt="" />
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                        <h1 class="font-dmserif text-3xl font-bold text-white"></h1>
+                                        <p
+                                            class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore
+                                            adipisci placeat.</p>
+
+                                        <div class="flex gap-4">
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                            <button
+                                                class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                                <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                    class="w-full h-full object-cover">
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="our-team">
+                            <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
+                        </div>
+                        <div class="grid grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3">
+                            <div
+                                class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                <div class="h-96 w-80">
+                                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                                        alt="" />
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                    <h1 class="font-dmserif text-3xl font-bold text-white">Beauty</h1>
+                                    <p
+                                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci
+                                        placeat.</p>
+
+                                    <div class="flex gap-4">
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div
+                                class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                <div class="h-96 w-80">
+                                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                        src="https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                                        alt="" />
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                    <h1 class="font-dmserif text-3xl font-bold text-white">Beyond Builder</h1>
+                                    <p
+                                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci
+                                        placeat.</p>
+                                    <div class="flex gap-4">
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+                                <div class="h-96 w-80">
+                                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
+                                        src="https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
+                                        alt="" />
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
+                                    <h1 class="font-dmserif text-3xl font-bold text-white">Shooting Star</h1>
+                                    <p
+                                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci
+                                        placeat.</p>
+                                    <div class="flex gap-4">
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
+                                                class="w-full h-full object-cover">
+                                        </button>
+                                        <button
+                                            class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
+                                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
+                                                class="w-full h-full object-cover">
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="hs-carousel-pagination justify-center absolute bottom-3 start-0 end-0 flex gap-x-2">
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-            </div>
-            <div
-                class="group rounded-lg relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-                <div class="h-96 w-80">
-                    <img class="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:blur-xs group-hover:brightness-75"
-                        src="https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-                        alt="" />
-                </div>
-                <div
-                    class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70">
-                </div>
-                <div
-                    class="absolute inset-0 flex translate-y-[55%] group-hover:translate-y-[20%] flex-col items-center justify-center px-9 text-center transition-all duration-500">
-                    <h1 class="font-dmserif text-3xl font-bold text-white">Shooting Star</h1>
-                    <p
-                        class="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat.</p>
-                    <div class="flex gap-4">
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 1"
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 2"
-                                class="w-full h-full object-cover">
-                        </button>
-                        <button class="w-8 h-8 p-2 rounded-full overflow-hidden bg-black shadow shadow-black/60">
-                            <img src="{{ URL('images/icons8-instagram-24.png') }}" alt="icon 3"
-                                class="w-full h-full object-cover">
-                        </button>
-                    </div>
+                    <!-- End Slider -->
                 </div>
             </div>
         </div>
@@ -344,7 +554,8 @@
         <div class="mx-auto w-full max-w-screen-xl">
             <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company
+                    </h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="#" class=" hover:underline">About</a>
@@ -361,7 +572,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help
+                        center</h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Discord Server</a>
@@ -378,7 +590,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal
+                    </h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Privacy Policy</a>
@@ -392,7 +605,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download
+                    </h2>
                     <ul class="text-gray-500 dark:text-gray-400 font-medium">
                         <li class="mb-4">
                             <a href="#" class="hover:underline">iOS</a>
