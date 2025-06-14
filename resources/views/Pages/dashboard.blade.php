@@ -186,7 +186,7 @@
     }
   }'class="relative">
             <div
-                class="hs-carousel w-full overflow-hidden bg-gray-100 rounded-lg dark:bg-neutral-900 lg:max-w-[1200px] mx-auto">
+                class="hs-carousel w-full overflow-hidden  rounded-lg lg:max-w-[1200px] mx-auto">
                 <div class="relative min-h-120 ">
                     <!-- transition-transform duration-700 -->
                     <div
@@ -214,7 +214,7 @@
                                             </p>
                                             <a href="{{ route('kategori.show', ['name' => $kategori->name]) }}"
                                                 class="mt-4 py-2 bg-black text-yellow-400 text-xs font-semibold rounded shadow hover:shadow-lg transition-shadow text-center block">
-                                                See more
+                                                Lihat
                                             </a>
                                         </div>
                                     </div>
@@ -231,8 +231,7 @@
     </div>
     <!-- End Slider -->
 
-    {{-- Konten 5 --}}
-    {{-- Konten 5 --}}
+    {{-- Konten 6 --}}
     <div class="flex flex-col items-center justify-center bg-white py-20">
         <h1 class="font-dmserif text-3xl text-black pb-10">Our Teams</h1>
         <!-- Slider -->
@@ -246,7 +245,7 @@
     }
   }'class="relative">
             <div
-                class="hs-carousel w-full overflow-hidden bg-gray-100 rounded-lg dark:bg-neutral-900 lg:max-w-[1200px] mx-auto">
+                class="hs-carousel w-full overflow-hidden bg-gray-200 rounded-lg dark:bg-neutral-900 lg:max-w-[1200px] mx-auto">
                 <div class="relative min-h-120 ">
                     <!-- transition-transform duration-700 -->
                     <div
